@@ -10,25 +10,18 @@ namespace ConsoleSupport {
 		int KB_code = 0;
 		if (_kbhit()) {
 			KB_code = _getch();
+			int curIndex = _model->GetSelectedIndex();
 			switch (KB_code) {
-			case KB_LEFT:
-				_model->SetValue("LEFT");
-				break;
+				case KB_UP:
+					_model->Select(--curIndex);
+					break;
 
-			case KB_RIGHT:
-				_model->SetValue("RIGHT");
-				break;
+				case KB_DOWN:
+					_model->Select(++curIndex);
+					break;
 
-			case KB_UP:
-				_model->SetValue("UP");
-				break;
-
-			case KB_DOWN:
-				_model->SetValue("DOWN");
-				break;
-
-			case KB_ESCAPE:
-				return true;
+				case KB_ENTER:
+					return true;
 			}
 		}
 		return false;
