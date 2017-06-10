@@ -113,6 +113,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BaseController.h" />
     <ClInclude Include="MenuModel.h" />
     <ClInclude Include="MenuObserver.h" />
   </ItemGroup>

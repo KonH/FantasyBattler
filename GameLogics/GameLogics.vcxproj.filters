@@ -21,6 +21,9 @@
     <ClInclude Include="MenuModel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="BaseController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MenuModel.cpp">

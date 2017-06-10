@@ -4,7 +4,7 @@
 using namespace GameLogics;
 
 namespace ConsoleSupport {
-	class MenuView : MenuObserver {
+	class MenuView : public MenuObserver {
 		MenuModel *_model;
 		void Render();
 	public:

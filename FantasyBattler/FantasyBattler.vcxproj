@@ -76,6 +76,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>..\GameLogics;..\ConsoleSupport;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <EntryPointSymbol>
@@ -117,7 +118,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ConsoleControllerFactory.cpp" />
     <ClCompile Include="EntryPoint.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="ConsoleObserverFactory.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ConsoleSupport\ConsoleSupport.vcxproj">
@@ -126,6 +130,11 @@
     <ProjectReference Include="..\GameLogics\GameLogics.vcxproj">
       <Project>{f618fc72-a2c8-429f-8590-b400e409f997}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ControllerFactory.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="ObserverFactory.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
