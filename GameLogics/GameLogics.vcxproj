@@ -114,11 +114,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="BaseController.h" />
+    <ClInclude Include="BaseModel.h" />
     <ClInclude Include="MenuModel.h" />
-    <ClInclude Include="MenuObserver.h" />
+    <ClInclude Include="BaseObserver.h" />
+    <ClInclude Include="StartModel.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BaseModel.cpp" />
     <ClCompile Include="MenuModel.cpp" />
+    <ClCompile Include="StartModel.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

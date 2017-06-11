@@ -1,21 +1,20 @@
 #pragma once
-#include "MenuObserver.h";
+#include "BaseModel.h";
 #include <string>;
 #include <vector>;
 
 namespace GameLogics {
 	typedef std::vector<std::string> strVector;
-	
-	class MenuModel {
+
+	class MenuModel:public BaseModel {
 		std::vector<std::string> _items;
 		int _selectedIndex;
-		MenuObserver *_observer;
-		void NotifyObserver();
 	public:
 		MenuModel();
 		void Select(int index);
 		int GetSelectedIndex();
+		void Exit();
+		void Apply();
 		strVector GetItems();
-		void AddObserver(MenuObserver *observer);
 	};
 }

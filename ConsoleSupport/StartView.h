@@ -1,14 +1,14 @@
 #pragma once
-#include "MenuModel.h";
+#include "StartModel.h";
 
 using namespace GameLogics;
 
 namespace ConsoleSupport {
-	class MenuView : public BaseObserver {
-		MenuModel *_model;
+	class StartView : public BaseObserver {
+		StartModel *_model;
 		void Render();
 	public:
-		MenuView(MenuModel *model);
+		StartView(StartModel* model);
 		void OnModelChanged();
 	};
 }

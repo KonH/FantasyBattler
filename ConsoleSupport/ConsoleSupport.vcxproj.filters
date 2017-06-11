@@ -21,12 +21,30 @@
     <ClInclude Include="MenuController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="StartView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyboardController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StartController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MenuView.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MenuController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StartView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyboardController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StartController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

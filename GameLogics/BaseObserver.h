@@ -1,7 +1,7 @@
 #pragma once
 
 namespace GameLogics {
-	class MenuObserver {
+	class BaseObserver {
 	public:
 		virtual void OnModelChanged() = 0;
 	};

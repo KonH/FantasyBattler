@@ -1,4 +1,3 @@
-#include <conio.h>
 #include "MenuController.h";
 
 namespace ConsoleSupport {
@@ -6,24 +5,24 @@ namespace ConsoleSupport {
 		_model = model;
 	}
 
-	bool MenuController::Process() {
-		int KB_code = 0;
-		if (_kbhit()) {
-			KB_code = _getch();
-			int curIndex = _model->GetSelectedIndex();
-			switch (KB_code) {
-				case KB_UP:
-					_model->Select(--curIndex);
-					break;
+	void MenuController::Process() {
+		int curIndex = _model->GetSelectedIndex();
+		switch (GetKeyCode()) {
+			case KB_UP:
+				_model->Select(--curIndex);
+				break;
 
-				case KB_DOWN:
-					_model->Select(++curIndex);
-					break;
+			case KB_DOWN:
+				_model->Select(++curIndex);
+				break;
 
-				case KB_ENTER:
-					return true;
-			}
+			case KB_ENTER:
+				_model->Apply();
+				break;
+
+			case KB_ESC:
+				_model->Exit();
+				break;
 		}
-		return false;
 	}
 }

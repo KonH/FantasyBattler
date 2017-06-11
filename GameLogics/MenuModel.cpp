@@ -4,12 +4,8 @@ using namespace std;
 
 namespace GameLogics {
 	MenuModel::MenuModel() {
-		std::string items[] = {"Start", "Exit"};
+		std::string items[] = { "Start", "Exit" };
 		_items.assign(items, items + 2);
-	}
-
-	void MenuModel::NotifyObserver() {
-		_observer->OnModelChanged();
 	}
 
 	void MenuModel::Select(int index) {
@@ -28,11 +24,15 @@ namespace GameLogics {
 		return _selectedIndex;
 	}
 
-	strVector MenuModel::GetItems() {
-		return _items;
+	void MenuModel::Apply() {
+		_transition = StateTransition::Start;
 	}
 
-	void MenuModel::AddObserver(MenuObserver *observer) {
-		_observer = observer;
+	void MenuModel::Exit() {
+		_transition = StateTransition::Exit;
+	}
+
+	strVector MenuModel::GetItems() {
+		return _items;
 	}
 }

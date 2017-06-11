@@ -3,6 +3,6 @@
 namespace GameLogics {
 	class BaseController {
 	public:
-		virtual bool Process() = 0;
+		virtual void Process() = 0;
 	};
 }

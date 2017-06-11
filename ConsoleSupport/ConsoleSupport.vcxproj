@@ -117,12 +117,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="KeyboardController.h" />
     <ClInclude Include="MenuController.h" />
     <ClInclude Include="MenuView.h" />
+    <ClInclude Include="StartController.h" />
+    <ClInclude Include="StartView.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="KeyboardController.cpp" />
     <ClCompile Include="MenuController.cpp" />
     <ClCompile Include="MenuView.cpp" />
+    <ClCompile Include="StartController.cpp" />
+    <ClCompile Include="StartView.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GameLogics\GameLogics.vcxproj">

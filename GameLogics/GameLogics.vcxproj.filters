@@ -15,18 +15,30 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MenuObserver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="MenuModel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="BaseController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="BaseModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StartModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseObserver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MenuModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StartModel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
