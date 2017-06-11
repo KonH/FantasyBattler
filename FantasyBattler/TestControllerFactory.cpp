@@ -1,10 +1,8 @@
-#ifdef CONSOLE
-#ifndef TEST
+#ifdef TEST
 #include "ControllerFactory.h";
-#include "MenuController.h";
-#include "StartController.h";
+#include "TestControllers.h";
 
-using namespace ConsoleSupport;
+using namespace Tests;
 
 namespace FantasyBattler {
 	BaseController* ControllerFactory::CreateMenuController(MenuModel* model) {
@@ -15,5 +13,4 @@ namespace FantasyBattler {
 		return new StartController(model);
 	}
 }
-#endif
 #endif
