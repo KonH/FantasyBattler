@@ -7,6 +7,7 @@ namespace GameLogics {
 		std::string _content;
 	public:
 		StartModel();
+		~StartModel() {};
 		void Back();
 		void Apply();
 		std::string GetContent();

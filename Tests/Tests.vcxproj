@@ -114,7 +114,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="SimpleMemoryUsageTest.cpp" />
     <ClCompile Include="TestControllers.cpp" />
   </ItemGroup>
   <ItemGroup>

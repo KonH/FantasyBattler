@@ -6,6 +6,12 @@ namespace FantasyBattler {
 		_controllerFactory = controllerFactory;
 	}
 
+	GameState::~GameState() {
+		delete _model;
+		delete _controller;
+		delete _observer;
+	}
+
 	GameState* GameState::Process() {
 		_controller->Process();
 		auto trans = _model->GetTransition();
@@ -16,6 +22,7 @@ namespace FantasyBattler {
 	}
 
 	GameState* GameState::Change(StateTransition transition) {
+		delete this;
 		switch (transition) {
 		case StateTransition::Menu: return new MenuGameState(_observerFactory, _controllerFactory);
 		case StateTransition::Start: return new StartGameState(_observerFactory, _controllerFactory);

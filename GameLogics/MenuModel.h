@@ -11,6 +11,7 @@ namespace GameLogics {
 		int _selectedIndex;
 	public:
 		MenuModel();
+		~MenuModel() {};
 		void Select(int index);
 		int GetSelectedIndex();
 		void Exit();

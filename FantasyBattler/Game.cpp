@@ -1,18 +1,24 @@
 #include "Game.h";
-#include "GameState.h";
-#include "ObserverFactory.h";
-#include "ControllerFactory.h";
 
 using namespace GameLogics;
 
 namespace FantasyBattler {
+	Game::Game() {
+		_observerFactory = new ObserverFactory();
+		_controllerFactory = new ControllerFactory();
+		_state = new MenuGameState(_observerFactory, _controllerFactory);
+	}
+
+	Game::~Game() {
+		delete _state;
+		delete _observerFactory;
+		delete _controllerFactory;
+	}
+
 	int Game::Loop() {
-		ObserverFactory observerFactory;
-		ControllerFactory controllerFactory;
-		GameState *state = new MenuGameState(&observerFactory, &controllerFactory);
 		while (true) {
-			state = state->Process();
-			if (!state) {
+			_state = _state->Process();
+			if (!_state) {
 				break;
 			}
 		}
