@@ -5,11 +5,11 @@
 using namespace Tests;
 
 namespace FantasyBattler {
-	BaseController* ControllerFactory::CreateMenuController(MenuModel* model) {
+	BaseController* ControllerFactory::CreateMenuController(MenuModel &model) {
 		return new MenuController(model);
 	}
 
-	BaseController* ControllerFactory::CreateStartController(StartModel* model) {
+	BaseController* ControllerFactory::CreateStartController(StartModel &model) {
 		return new StartController(model);
 	}
 }

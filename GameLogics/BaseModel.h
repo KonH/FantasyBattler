@@ -11,7 +11,7 @@ namespace GameLogics {
 		void NotifyObserver();
 	public:
 		virtual ~BaseModel() {};
-		StateTransition GetTransition();
 		void AddObserver(BaseObserver *observer);
+		StateTransition GetTransition();
 	};
 }

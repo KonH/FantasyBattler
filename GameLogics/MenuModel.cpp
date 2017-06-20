@@ -25,7 +25,12 @@ namespace GameLogics {
 	}
 
 	void MenuModel::Apply() {
-		_transition = StateTransition::Start;
+		if (_selectedIndex == 0) {
+			_transition = StateTransition::Start;
+		}
+		else {
+			this->Exit();
+		}
 	}
 
 	void MenuModel::Exit() {

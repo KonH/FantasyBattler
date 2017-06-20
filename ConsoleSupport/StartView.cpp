@@ -2,9 +2,8 @@
 #include <iostream>;
 
 namespace ConsoleSupport {
-	StartView::StartView(StartModel *model) {
-		_model = model;
-		_model->AddObserver(this);
+	StartView::StartView(StartModel &model) : _model(model) {
+		_model.AddObserver(this);
 		Render();
 	}
 
@@ -14,6 +13,6 @@ namespace ConsoleSupport {
 
 	void StartView::Render() {
 		system("cls");
-		std::cout << _model->GetContent();
+		std::cout << _model.GetContent();
 	}
 }

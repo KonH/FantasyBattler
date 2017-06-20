@@ -6,9 +6,9 @@ using namespace GameLogics;
 
 namespace ConsoleSupport {
 	class StartController :public KeyboardController {
-		StartModel *_model;
+		StartModel &_model;
 	public:
-		StartController(StartModel *model);
+		StartController(StartModel &model);
 		void Process();
 	};
 }

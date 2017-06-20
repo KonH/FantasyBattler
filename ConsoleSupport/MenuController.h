@@ -6,9 +6,9 @@ using namespace GameLogics;
 
 namespace ConsoleSupport {
 	class MenuController:public KeyboardController {
-		MenuModel *_model;
+		MenuModel &_model;
 	public:
-		MenuController(MenuModel *model);
+		MenuController(MenuModel &model);
 		void Process();
 	};
 }

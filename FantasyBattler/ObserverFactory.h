@@ -7,7 +7,7 @@ using namespace GameLogics;
 namespace FantasyBattler {
 	class ObserverFactory {
 	public:
-		BaseObserver* CreateMenuObserver(MenuModel* model);
-		BaseObserver* CreateStartObserver(StartModel* model);
+		BaseObserver* CreateMenuObserver(MenuModel &model);
+		BaseObserver* CreateStartObserver(StartModel &model);
 	};
 }

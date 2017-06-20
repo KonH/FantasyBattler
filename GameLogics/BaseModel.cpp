@@ -1,6 +1,10 @@
 #include "BaseModel.h";
 
 namespace GameLogics {
+	void BaseModel::AddObserver(BaseObserver *observer) {
+		_observer = observer;
+	}
+
 	void BaseModel::NotifyObserver() {
 		_observer->OnModelChanged();
 	}
@@ -9,7 +13,4 @@ namespace GameLogics {
 		return _transition;
 	}
 
-	void BaseModel::AddObserver(BaseObserver *observer) {
-		_observer = observer;
-	}
 }

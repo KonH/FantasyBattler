@@ -8,7 +8,7 @@ using namespace GameLogics;
 namespace FantasyBattler {
 	class ControllerFactory {
 	public:
-		BaseController* CreateMenuController(MenuModel* model);
-		BaseController* CreateStartController(StartModel* model);
+		BaseController* CreateMenuController(MenuModel &model);
+		BaseController* CreateStartController(StartModel &model);
 	};
 }

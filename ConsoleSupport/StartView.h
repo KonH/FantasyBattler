@@ -5,10 +5,10 @@ using namespace GameLogics;
 
 namespace ConsoleSupport {
 	class StartView : public BaseObserver {
-		StartModel *_model;
+		StartModel &_model;
 		void Render();
 	public:
-		StartView(StartModel* model);
+		StartView(StartModel &model);
 		void OnModelChanged();
 	};
 }

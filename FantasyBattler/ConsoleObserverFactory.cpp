@@ -6,11 +6,11 @@
 using namespace ConsoleSupport;
 
 namespace FantasyBattler {
-	BaseObserver* ObserverFactory::CreateMenuObserver(MenuModel* model) {
+	BaseObserver* ObserverFactory::CreateMenuObserver(MenuModel &model) {
 		return new MenuView(model);
 	}
 
-	BaseObserver* ObserverFactory::CreateStartObserver(StartModel* model) {
+	BaseObserver* ObserverFactory::CreateStartObserver(StartModel &model) {
 		return new StartView(model);
 	}
 }

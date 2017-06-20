@@ -8,11 +8,11 @@ namespace FantasyBattler {
 		void OnModelChanged() {}
 	};
 
-	BaseObserver* ObserverFactory::CreateMenuObserver(MenuModel* model) {
+	BaseObserver* ObserverFactory::CreateMenuObserver(MenuModel &model) {
 		return new EmptyView();
 	}
 
-	BaseObserver* ObserverFactory::CreateStartObserver(StartModel* model) {
+	BaseObserver* ObserverFactory::CreateStartObserver(StartModel &model) {
 		return new EmptyView();
 	}
 }

@@ -6,8 +6,8 @@
 namespace FantasyBattler {
 	class Game {
 		GameState *_state;
-		ObserverFactory *_observerFactory;
-		ControllerFactory *_controllerFactory;
+		ObserverFactory &_observerFactory;
+		ControllerFactory &_controllerFactory;
 	public:
 		Game();
 		~Game();

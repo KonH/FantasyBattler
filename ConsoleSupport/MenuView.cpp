@@ -2,9 +2,8 @@
 #include "MenuView.h";
 
 namespace ConsoleSupport {
-	MenuView::MenuView(MenuModel *model) {
-		_model = model;
-		_model->AddObserver(this);
+	MenuView::MenuView(MenuModel &model) : _model(model) {
+		_model.AddObserver(this);
 		Render();
 	}
 
@@ -14,8 +13,8 @@ namespace ConsoleSupport {
 
 	void MenuView::Render() {
 		system("cls");
-		int index = _model->GetSelectedIndex();
-		auto items = _model->GetItems();
+		int index = _model.GetSelectedIndex();
+		auto items = _model.GetItems();
 		for (int i = 0; i < items.size(); i++) {
 			auto item = items[i];
 			if (i == index) {
