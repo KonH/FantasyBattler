@@ -23,8 +23,14 @@ namespace FantasyBattler {
 	GameState* GameState::Change(StateTransition transition) {
 		GameState* newState = NULL;
 		switch (transition) {
-		case StateTransition::Menu: newState = new MenuGameState(_observerFactory, _controllerFactory);
-		case StateTransition::Start: newState = new StartGameState(_observerFactory, _controllerFactory);
+			case StateTransition::Menu: 
+				newState = new MenuGameState(_observerFactory, _controllerFactory);
+				break;
+
+			case StateTransition::Start: 
+				newState = new StartGameState(_observerFactory, _controllerFactory);
+				break;
+		}
 		}
 		delete this;
 		return newState;
