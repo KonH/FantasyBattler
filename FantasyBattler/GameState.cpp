@@ -1,4 +1,6 @@
 #include "GameState.h";
+#include "Debug.h";
+#include <typeinfo>;
 
 namespace FantasyBattler {
 	GameState::GameState(ObserverFactory &observerFactory, ControllerFactory &controllerFactory):
@@ -31,6 +33,8 @@ namespace FantasyBattler {
 				newState = new StartGameState(_observerFactory, _controllerFactory);
 				break;
 		}
+		if (newState) {
+			Debug("New state: " + std::string(typeid(*newState).name()));
 		}
 		delete this;
 		return newState;
